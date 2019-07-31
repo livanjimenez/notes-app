@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
-
+import Header from './components/Header';
+ 
 class App extends Component {
+
   state = {
     data: null
   };
@@ -26,16 +27,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        <p>{this.state.data}</p>
+        <Header/>
+
       </div>
     );
 
   }
 }
-
-const backendStyle = {
-  fontSize: '24px',
-  textAlign: 'center'
-};
 
 export default App;
