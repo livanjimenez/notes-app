@@ -23,7 +23,7 @@ class App extends Component {
   };
 
 
-  return() {
+  render() {
     return (
       <div>
         <p>{this.state.data}</p>
