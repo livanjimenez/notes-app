@@ -3,6 +3,7 @@ import Header from './components/Header';
 import TodoList from './components/TodoList';
 import TodoItems from './components/TodoItems';
 import './App.css';
+import './todoStyles.css'
 
 class App extends Component {
   inputElement = React.createRef();
@@ -68,17 +69,15 @@ class App extends Component {
   render() {
     return (
       <body>
+        <Header />
         <div>
-          <Header />
-          <div>
-            <TodoList
-              addItem={this.addItem}
-              inputElement={this.inputElement}
-              handleInput={this.handleInput}
-              currentItem={this.state.currentItem}
-            />
-            <TodoItems entries={this.state.items} deleteItem={this.deleteItem} />
-          </div>
+          <TodoList
+            addItem={this.addItem}
+            inputElement={this.inputElement}
+            handleInput={this.handleInput}
+            currentItem={this.state.currentItem}
+          />
+          <TodoItems entries={this.state.items} deleteItem={this.deleteItem} />
         </div>
       </body>
     );
