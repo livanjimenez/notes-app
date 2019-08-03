@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './components/Header';
 import TodoList from './components/TodoList';
 import TodoItems from './components/TodoItems';
+import { Container } from '@material-ui/core';
 import './App.css';
 import './todoStyles.css'
 
@@ -70,7 +71,7 @@ class App extends Component {
     return (
       <body>
         <Header />
-        <div>
+        <Container maxWidth="xs">
           <TodoList
             addItem={this.addItem}
             inputElement={this.inputElement}
@@ -78,7 +79,7 @@ class App extends Component {
             currentItem={this.state.currentItem}
           />
           <TodoItems entries={this.state.items} deleteItem={this.deleteItem} />
-        </div>
+        </Container>
       </body>
     );
   }

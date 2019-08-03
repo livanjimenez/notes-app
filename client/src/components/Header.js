@@ -6,7 +6,10 @@ function Header() {
 
 const header = {
     textAlign: 'center',
-    fontSize: '3em',
+    fontSize: '4em',
+    padding: '3% 3%',
+    fontFamily: 'Beth Ellen, cursive',
+    color: 'white',
 };
 
 export default Header;
