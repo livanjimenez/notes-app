@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import Header from './components/Header';
 import TodoList from './components/TodoList';
 import TodoItems from './components/TodoItems';
-import { Container } from '@material-ui/core';
+import { Container, Box } from '@material-ui/core';
 import './App.css';
 import './todoStyles.css'
+import { boxShadow, textAlign } from '@material-ui/system';
 
 class App extends Component {
   inputElement = React.createRef();
@@ -71,15 +72,26 @@ class App extends Component {
     return (
       <body>
         <Header />
+
         <Container maxWidth="xs">
-          <TodoList
-            addItem={this.addItem}
-            inputElement={this.inputElement}
-            handleInput={this.handleInput}
-            currentItem={this.state.currentItem}
-          />
-          <TodoItems entries={this.state.items} deleteItem={this.deleteItem} />
+
+          <Box
+            color="primary.main"
+            bgcolor="background.paper"
+            boxShadow={3}
+            textAlign="center"
+          >
+            <TodoList
+              addItem={this.addItem}
+              inputElement={this.inputElement}
+              handleInput={this.handleInput}
+              currentItem={this.state.currentItem}
+            />
+            <TodoItems entries={this.state.items} deleteItem={this.deleteItem} />
+          </Box>
+
         </Container>
+
       </body>
     );
   }

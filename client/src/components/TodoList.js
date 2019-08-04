@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from '@material-ui/core';
 
 class TodoList extends Component {
   componentDidUpdate() {
@@ -15,7 +16,9 @@ class TodoList extends Component {
               value={this.props.currentItem.text}
               onChange={this.props.handleInput}
             />
-            <button type="submit">New Idea</button>
+            <Button type="submit" variant="contained">
+              New Idea
+            </Button>
           </form>
         </div>
       </div>
