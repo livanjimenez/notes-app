@@ -67,7 +67,6 @@ class App extends Component {
     return body;
   };
 
-
   render() {
     return (
       <body>
@@ -92,9 +91,14 @@ class App extends Component {
 
         </Container>
 
+        <div style={filler}></div>
       </body>
     );
   }
+}
+
+const filler = {
+  padding: '5%',
 }
 
 export default App;

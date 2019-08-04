@@ -11,12 +11,12 @@ class TodoList extends Component {
       <div className="todoListMain">
         <div className="todoHeader">
           <form onSubmit={this.props.addItem}>
-            <input placeholder="Note"
+            <input style={inputStyle} placeholder="Note"
               ref={this.props.inputElement}
               value={this.props.currentItem.text}
               onChange={this.props.handleInput}
             />
-            <Button type="submit" variant="contained">
+            <Button type="submit">
               New Idea
             </Button>
           </form>
@@ -26,5 +26,8 @@ class TodoList extends Component {
   }
 }
 
+const inputStyle = {
+  backgroundColor: '#ede7f6',
+};
 
 export default TodoList;
